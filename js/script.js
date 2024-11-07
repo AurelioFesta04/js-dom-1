@@ -1,10 +1,14 @@
-const turnOnOff = document.querySelector(".spenta-accesa");
-const lampadinaOff = document.querySelector(".lampadina-off")
-const lampadinaOn = document.querySelector(".lampadina-on")
+const lampadinaOffOn = document.querySelector(".lampadina-off")
 const buttonOnOff = document.getElementById("on-off");
 
 buttonOnOff.addEventListener("click", function () {
 
+    if (lampadinaOffOn.src.includes("img-2/white_lamp.png")) {
         buttonOnOff.innerHTML = ("Spegni");
-        lampadinaOff.src = "./img 2/yellow_lamp.png";
+        lampadinaOffOn.src = "./img-2/yellow_lamp.png";
+    } else {
+        buttonOnOff.innerHTML = ("Accendi");
+        lampadinaOffOn.src = "./img-2/white_lamp.png";
+    }
+    
 });
